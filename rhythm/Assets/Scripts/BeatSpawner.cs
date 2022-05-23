@@ -11,6 +11,7 @@ public class BeatSpawner : MonoBehaviour
     private string[] noteRestrictions = {"F4", "G4", "A4","B4"};
 
     public MenuController pause;
+    public GameObject hitFX;
     public GameObject preFabs;
     List<Note> notes = new List<Note>();
     List<GameObject> noteObjects = new List<GameObject>();
@@ -74,6 +75,7 @@ public class BeatSpawner : MonoBehaviour
                     Destroy(noteObjects[hitIndex]);
                     hitIndex++;
                 }
+                var fx = Instantiate(hitFX, transform);
             }
         }
         if(hitIndex < timeStamps.Count)

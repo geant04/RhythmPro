@@ -73,11 +73,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5874627329020395790, guid: 9d01885676a95e8479e45ea2e500cea9, type: 3}
       propertyPath: m_Color.g
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5874627329020395790, guid: 9d01885676a95e8479e45ea2e500cea9, type: 3}
       propertyPath: m_Color.r
-      value: 0.9266672
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5874627329020395791, guid: 9d01885676a95e8479e45ea2e500cea9, type: 3}
       propertyPath: keyToPress

@@ -150,7 +150,7 @@ RectTransform:
   m_GameObject: {fileID: 201526935}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.6841333, y: 0.58713293, z: 0.5212444}
+  m_LocalScale: {x: 0.6071683, y: 0.58713293, z: 0.5212444}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 895828571}
@@ -194,7 +194,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 0.8
-  m_Text: WELCOME TO THE RHYTHM GAME DEMO
+  m_Text: Rhythm Game
 --- !u!222 &201526938
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -952,7 +952,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: bd85a279f4e895d46a61ebfb0c9174eb, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 035f78c50407a714d8263e71c6f0238b, type: 3}
   m_Color: {r: 0.43559986, g: 0.7169812, b: 0.5522951, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -972,7 +972,7 @@ Transform:
   m_GameObject: {fileID: 1425513759}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -3641.2742}
-  m_LocalScale: {x: 179.98375, y: 99.06556, z: 40.458603}
+  m_LocalScale: {x: 116.98943, y: 99.06556, z: 40.458603}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 895828571}

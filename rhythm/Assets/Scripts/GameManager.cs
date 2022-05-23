@@ -53,7 +53,6 @@ public class GameManager : MonoBehaviour
     public string[] hitTexts = {"Fine", "Nice", "Excellent", "Miss"};
 
     public List<GameObject> hitObjects;
-
     List<GameObject> objs = new List<GameObject>();
 
     // Start is called before the first frame update
@@ -109,7 +108,7 @@ public class GameManager : MonoBehaviour
                 showResults();
             }
         }
-        timeText.text = "Time:" + GetAudioSourceTime() + "s\n";
+        //timeText.text = "Time:" + GetAudioSourceTime() + "s\n";
     }
     ///////
     public void ReadFromFile()
