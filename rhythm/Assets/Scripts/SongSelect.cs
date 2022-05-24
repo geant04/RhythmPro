@@ -12,6 +12,7 @@ public class SongSelect : MonoBehaviour
 
     public AudioSource[] songSources;
     public AudioSource previewMusic;
+    public string[] songNames = {"Yellow - Coldplay", "Helicopter - Bloc Party"};
 
     // Start is called before the first frame update
     void Start()
@@ -33,7 +34,7 @@ public class SongSelect : MonoBehaviour
         GameManager.musicSelectedName = songSources[index].name;
 
 
-        songTitle.text = GameManager.musicSelectedName;
+        songTitle.text = songNames[index];
 
         previewMusic = songSources[index];
         previewMusic.Play();
