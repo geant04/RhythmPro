@@ -12,7 +12,7 @@ public class SongSelect : MonoBehaviour
 
     public AudioSource[] songSources;
     public AudioSource previewMusic;
-    public string[] songNames = {"Yellow - Coldplay", "Helicopter - Bloc Party"};
+    public string[] songNames = {"Yellow - Coldplay", "Helicopter - Bloc Party", "Through the Fire and Flames - Dragonforce"};
 
     // Start is called before the first frame update
     void Start()
