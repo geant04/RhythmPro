@@ -35,6 +35,7 @@ public class SongSelect : MonoBehaviour
 
         previewMusic = songSources[index];
         previewMusic.Play();
+        previewMusic.time = 1.2f;
 
         showSongInfo();
     }
@@ -104,6 +105,13 @@ public class SongSelect : MonoBehaviour
 
         previewMusic = songSources[index];
         previewMusic.Play();
+
+        float t = 1.2f;
+        if(index == 1)
+        {
+            t = 2.5f;
+        }
+        previewMusic.time = t;
 
         showSongInfo();
     }

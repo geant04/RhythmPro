@@ -90,6 +90,8 @@ public class GameManager : MonoBehaviour
                 score = 0f;
                 streak = 0;
                 hits = 0;
+                accSum = 0;
+                
                 Array.Clear(scoreData, 0, scoreData.Length);
 
                 scoreText.text = "Score: " + score;
