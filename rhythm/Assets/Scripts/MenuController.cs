@@ -28,24 +28,38 @@ public class MenuController : MonoBehaviour
                 resumeGame();
             } else
             {
-                isPaused = true;
-                pauseMenu.SetActive(true);
-                Time.timeScale = 0f;
-                
-                GameManager.instance.theMusic.Pause();
-                GameManager.instance.theMusic.transform.localScale = new Vector3(GameManager.instance.theMusic.time,0,0);
+                pauseGame();
             }
         }
+        if(!Application.isFocused && !isPaused)
+        {
+            pauseGame();
+        }
+    }
+
+    public void pauseGame()
+    {
+        Debug.Log("pause");
+        isPaused = true;
+        pauseMenu.SetActive(true);
+        Time.timeScale = 0f;
+                
+        GameManager.instance.theMusic.Pause();
+        GameManager.instance.theMusic.transform.localScale = new Vector3(GameManager.instance.theMusic.time,0,0);
     }
 
     public void resumeGame()
     {
+        Debug.Log("resume");
         isPaused = false;
         pauseMenu.SetActive(false);
         Time.timeScale = 1f;
         
-        GameManager.instance.theMusic.Play();
-        GameManager.instance.theMusic.time = GameManager.instance.theMusic.transform.localScale.x;
+        if(GameManager.instance.theMusic.transform.localScale.x != 0)
+        {
+            GameManager.instance.theMusic.Play();
+            GameManager.instance.theMusic.time = GameManager.instance.theMusic.transform.localScale.x;
+        }
     }
     public void returnMenu()
     {

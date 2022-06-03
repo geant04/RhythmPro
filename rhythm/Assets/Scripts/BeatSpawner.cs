@@ -66,7 +66,7 @@ public class BeatSpawner : MonoBehaviour
         }
         
         if(hitIndex < timeStamps.Count){
-            if(Input.GetKeyDown(input))
+            if(Input.GetKeyDown(input) && GameManager.playing())
             {
                 if( Mathf.Abs((float)timeStamps[hitIndex] - (float)GameManager.GetAudioSourceTime()) < 0.15f )
                 {

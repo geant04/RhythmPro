@@ -80,46 +80,47 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(!startPlaying)
+        if(Application.isFocused)
         {
-            if(Input.GetKeyDown(keyToPress) && !playedSong){
-                playedSong = true;
-                resultScreen.SetActive(false);
-                Time.timeScale = 1f;
-
-                score = 0f;
-                streak = 0;
-                hits = 0;
-                accSum = 0;
-                
-                Array.Clear(scoreData, 0, scoreData.Length);
-
-                scoreText.text = "Score: " + score;
-                streakText.text = "" + streak;
-
-                startPlaying = true;
-                
-                theMusic.transform.localScale = new Vector3(0,0,0);
-                theMusic.time = GameManager.instance.theMusic.transform.localScale.x;
-
-                theMusic.Play();
-            }
-        }
-        else{
-
-            if(theMusic.isPlaying || pauseMenu.isPaused) //either the music is playing or we are paused.
+            if(!startPlaying)
             {
-                //timeText.text = "Time:" + GetAudioSourceTime() + "s\n";
+                if(Input.GetKeyDown(keyToPress) && !playedSong){
+                    Debug.Log("start game");
+                    playedSong = true;
+                    resultScreen.SetActive(false);
+                    Time.timeScale = 1f;
+
+                    score = 0f;
+                    streak = 0;
+                    hits = 0;
+                    accSum = 0;
+                    
+                    Array.Clear(scoreData, 0, scoreData.Length);
+
+                    scoreText.text = "Score: " + score;
+                    streakText.text = "" + streak;
+
+                    startPlaying = true;
+                    
+                    theMusic.transform.localScale = new Vector3(0,0,0);
+                    theMusic.time = GameManager.instance.theMusic.transform.localScale.x;
+
+                    theMusic.Play();
+                }
             }
-            else{ // song over, pop up the results
-                startPlaying = false;
+            else{
+                if(!theMusic.isPlaying && !pauseMenu.isPaused) //either the music is playing or we are paused.
+                {
+                    Debug.Log("is playing: " + theMusic.isPlaying + "\nis paused: " + pauseMenu.isPaused);
+                    startPlaying = false;
 
-                theMusic.transform.localScale = new Vector3(0,0,0);
-                theMusic.time = GameManager.instance.theMusic.transform.localScale.x;
+                    theMusic.transform.localScale = new Vector3(0,0,0);
+                    theMusic.time = GameManager.instance.theMusic.transform.localScale.x;
 
-                Time.timeScale = 1f;
+                    Time.timeScale = 1f;
 
-                showResults();
+                    showResults();
+                }
             }
         }
         //timeText.text = "Time:" + GetAudioSourceTime() + "s\n";
